@@ -1,0 +1,19 @@
+apply plugin: 'java'
+
+    apply plugin: 'maven'
+
+    apply plugin: 'idea'  // Pick IDE appropriate for you
+
+    apply plugin: 'eclipse'
+
+repositories {
+    jcenter()
+     maven { url "http://repo.hortonworks.com/content/repositories/releases/" }
+    
+}
+
+dependencies{
+   compile group: 'org.apache.hadoop', name: 'hadoop-common', version: '2.7.3'
+   compile group: 'org.apache.hadoop', name: 'hadoop-yarn-api', version: '2.7.3'
+   compile group: 'org.apache.hadoop', name: 'hadoop-mapreduce-client-core', version: '2.7.3'
+} 
